@@ -7,10 +7,10 @@ import sys
 from getTwitterHandles import getTwitterHandles
 
 #Twitter API credentials (expired, don't even try it)
-consumer_key = "1H09Gu7nLBOY8aLr5MRpztb7u"
-consumer_secret = "2fxngnfykmnV9o3FDy7pE0nAiLQpMHiUpre0vV7mustBNIL8QO"
-access_key = "908720691889020928-vg1LwKaItsSy5ivk4QKcqL4S4UfhFht"
-access_secret = "OU74GrCrWuJmLQRwevqUk5UObZnx9bWctEr8aGUt6T39N"
+consumer_key = ""
+consumer_secret = ""
+access_key = ""
+access_secret = ""
 
 
 def get_all_tweets(screen_name):
