@@ -1,5 +1,11 @@
 # Crypto-Twitter-Analysis
 
+##Purpose
+
+An analysis of the tweets of the "100 most influential people in crypto" (found here: https://cryptoweekly.co/100/)
+
+##Directory/File Functionality
+
 ./Tweets:	CSV documents containing last ~3000 tweets for correponding account
 
 getTwitterHandles.py:	Gets handles from https://cryptoweekly.co/100/
