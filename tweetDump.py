@@ -1,12 +1,11 @@
-#!/usr/bin/env python
-# encoding: utf-8
+# Modified from: https://gist.github.com/yanofsky/5436496
 
 import tweepy #https://github.com/tweepy/tweepy
 import csv
 import sys
 from getTwitterHandles import getTwitterHandles
 
-#Twitter API credentials (expired, don't even try it)
+# Twitter API credentials (expired, don't even try it)
 consumer_key = ""
 consumer_secret = ""
 access_key = ""
@@ -74,9 +73,5 @@ if __name__ == '__main__':
 	for i in range(startHere, len(handles)):
 		get_all_tweets(str(handles[i]))
 
-
-
 #	for handle in handles:
 #		get_all_tweets(str(handle))
-
-
