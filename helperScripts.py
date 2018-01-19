@@ -1,3 +1,5 @@
+import pandas as pd
+
 # Measures apathy towards Bitcoin Cash (0 to 1, 0=low apathy, 1=high apathy)
 def bchApathyIndex(df):
     # Creates search terms and counters
@@ -29,3 +31,35 @@ def bchApathyIndex(df):
     else:
         index = 0
     return [index, totalMentions]
+
+# Returns number of tweets which match keyword for all 100 twitter users
+def searchTweets(df, keyword):
+    matches = []
+    keyword = keyword.lower()
+    
+    # Iterates over each twitter user
+    for path in df["Path To Tweets"]:
+        counter = 0
+
+        # Creates dataframe containing his/her tweets
+        tempDf = pd.read_csv(path)
+
+        # Iterates over tweets
+        for tweet in tempDf["text"]:
+            # If a tweet contains the keyword, increments counter
+            if keyword in tweet.lower():
+                counter+=1
+
+        # Adds number of tweets which match keyword for current user to 'matches' array
+        matches.append(counter)
+    
+    return matches
+
+
+''' For testing purposes
+import pickle
+import pandas as pd
+
+temp = pickle.load(open("temp.pickle", "rb"))
+searchTweets(temp, "segwit")
+'''
